@@ -1,13 +1,30 @@
-.item-list {
-  width: 50%;
+.main-title {
+  text-align: center;
+  width: 80%;
   max-width: 796px;
-  margin: 100px auto;
+  margin: 20px auto;
+  border-bottom: 2px solid lightgrey;
+  padding-bottom: 4px;
+}
+.item-list {
+  width: 80%;
+  max-width: 796px;
+  margin: 80px auto;
 }
 
 .item {
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
+}
+
+.item-body a {
+  text-decoration: none;
+}
+
+.item-body a:hover {
+  color: lightskyblue;
+  text-decoration: underline;
 }
 
 .item-body h2 {
