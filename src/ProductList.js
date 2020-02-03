@@ -9,7 +9,7 @@ class ProductList extends React.Component {
 
   componentDidMount() {
     this.setState({
-      products: seed.products
+      products: seed.products.sort((a, b) => b.votes - a.votes)
     });
   }
 

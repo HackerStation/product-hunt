@@ -6,7 +6,7 @@ class Product extends React.Component {
     const { id, title, description, votes, avatar, productImage } = this.props;
     return (
       <div id={id} className='item'>
-        <div className='item-img' style={{ width: '30%' }}>
+        <div className='item-img' style={{ width: '25%' }}>
           <img
             src={productImage}
             alt=''
