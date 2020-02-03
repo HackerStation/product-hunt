@@ -3,11 +3,12 @@ import { FaCaretUp } from 'react-icons/fa';
 
 class Product extends React.Component {
   render() {
+    const { id, title, description, votes, avatar, productImage } = this.props;
     return (
-      <div className='item'>
+      <div id={id} className='item'>
         <div className='item-img' style={{ width: '30%' }}>
           <img
-            src='images/products/image-aqua.png'
+            src={productImage}
             alt=''
             style={{ width: '100%', height: '100%' }}
           />
@@ -17,13 +18,13 @@ class Product extends React.Component {
             <button>
               <FaCaretUp color='lightskyblue' size={32} />
             </button>
-            <h2>62</h2>
+            <h2>{votes}</h2>
           </div>
-          <h2 className='item-title'>Yellow Pail</h2>
-          <p>On-demand sand castle construction expertise.</p>
+          <h2 className='item-title'>{title}</h2>
+          <p>{description}</p>
           <div className='item-footer'>
             <span className='extra'>Submitted by:</span>
-            <img src='images/avatars/daniel.jpg' alt='' />
+            <img src={avatar} alt='' />
           </div>
         </div>
       </div>
