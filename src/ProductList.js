@@ -3,26 +3,30 @@ import Product from './Product';
 import { seed } from './seed';
 
 class ProductList extends React.Component {
+  state = {
+    products: []
+  };
+
+  componentDidMount() {
+    this.setState({
+      products: seed.products
+    });
+  }
+
   render() {
-    const product = seed.products[0];
-    const {
-      id,
-      title,
-      description,
-      votes,
-      submitterAvatarUrl,
-      productImageUrl
-    } = product;
     return (
       <div className='item-list'>
-        <Product
-          id={id}
-          title={title}
-          description={description}
-          votes={votes}
-          avatar={submitterAvatarUrl}
-          productImage={productImageUrl}
-        />
+        {this.state.products.map(product => (
+          <Product
+            key={`product-${product.id}`}
+            id={product.id}
+            title={product.title}
+            description={product.description}
+            votes={product.votes}
+            avatar={product.submitterAvatarUrl}
+            productImage={product.productImageUrl}
+          />
+        ))}
       </div>
     );
   }

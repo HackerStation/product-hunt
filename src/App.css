@@ -1,12 +1,13 @@
 .item-list {
   width: 50%;
-  max-width: 720px;
+  max-width: 796px;
   margin: 100px auto;
 }
 
 .item {
   display: flex;
   justify-content: space-between;
+  margin: 10px 0;
 }
 
 .item-body h2 {
